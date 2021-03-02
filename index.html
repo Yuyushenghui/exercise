@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+ <html lang="en-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kuang Jin">
+    <meta name="description" content="online buddhism museum">
+    <meta name="generator" content="brackets, visual studio code">
+    <meta name="keyword" content="Buddhism, Museum, education, history, community resource">
+    
+    <title>
+      Virtual Buddhism Museum
+     </title>
+    
+    <link rel="icon" href="image/法轮.gif">
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+  <div class="skin1head">
+    <img id="title" alt="Virtual buddhism museum" src="image/white virual buddhism museum.png">
+   </div>
+  <div class="container">
+         <div class="wrap" style="left: -1200px;">
+             <img src="image/佛光山.jpg" alt="BLIA">
+             <img src="image/信女拜僧.jpg" alt="Thailand monk">
+             <img src="image/龙牙寺.jpg" alt="longya temple">
+             <img src="image/龙门石窟.jpg" alt="longmen">
+             <img src="image/泰国.jpg" alt="Thailand">
+             <img src="image/峨眉金顶.jpg" alt="Golden dome">
+             <img src="image/大昭寺.jpg" alt="Dazhao temple">
+         </div>
+         <div class="buttons">
+             <span class="on">1</span>
+             <span>2</span>
+             <span>3</span>
+             <span>4</span>
+             <span>5</span>
+         </div>
+         <a href="javascript:;" class="arrow arrow_left"><img class="parenthese" alt="left arrow" src="image/（.png"></a>
+         <a href="javascript:;" class="arrow arrow_right"><img class="parenthese" alt="right arrow" src="image/）.png"></a>
+     </div>
+     <script>
+      var wrap = document.querySelector(".wrap");
+      var next = document.querySelector(".arrow_right");
+      var prev = document.querySelector(".arrow_left");
+      next.onclick = function () {
+          next_pic();
+      }
+      prev.onclick = function () {
+          prev_pic();
+      }
+      function next_pic () {
+          index++;
+          if(index > 4){
+              index = 0;
+          }
+          showCurrentDot();
+          var newLeft;
+          if(wrap.style.left === "-7200px"){
+              newLeft = -1200;
+          }else{
+              newLeft = parseInt(wrap.style.left)-1200;
+          }
+          wrap.style.left = newLeft + "px";
+      }
+      function prev_pic () {
+          index--;
+          if(index < 0){
+              index = 4;
+          }
+          showCurrentDot();
+          var newLeft;
+          if(wrap.style.left === "0px"){
+              newLeft = -2400;
+          }else{
+              newLeft = parseInt(wrap.style.left)+1200;
+          }
+          wrap.style.left = newLeft + "px";
+      }
+      var timer = null;
+      function autoPlay () {
+          timer = setInterval(function () {
+              next_pic();
+          },2000);
+      }
+      autoPlay();
+
+      var container = document.querySelector(".container");
+      container.onmouseenter = function () {
+          clearInterval(timer);
+      }
+      container.onmouseleave = function () {
+          autoPlay();    
+      }
+
+      var index = 0;
+      var dots = document.getElementsByTagName("span");
+      function showCurrentDot () {
+          for(var i = 0, len = dots.length; i < len; i++){
+              dots[i].className = "";
+          }
+          dots[index].className = "on";
+      }
+
+      for (var i = 0, len = dots.length; i < len; i++){
+          (function(i){
+              dots[i].onclick = function () {
+                  var dis = index - i;
+                  if(index == 4 && parseInt(wrap.style.left)!== -6000){
+                      dis = dis - 5;     
+                  }
+                  if(index == 0 && parseInt(wrap.style.left)!== -1200){
+                      dis = 5 + dis;
+                  }
+                  wrap.style.left = (parseInt(wrap.style.left) +  dis * 1200)+"px";
+                  index = i;
+                  showCurrentDot();
+              }
+          })(i);            
+      }
+   </script>
+   <div class="bigbox">
+   <a href="contentnotavailable.html"><div class="box"><img src="image/mandala.png" class="imginbox"><p class="btext">SHRINE<br>大殿</p></div></a>
+   <a href="history.html"><div class="box" id="b2"><img src="image/mandala.png" class="imginbox"><p class="btext">HISTORY<br>历史</p></div></a>
+   <a href="contentnotavailable.html"><div class="box" id="b3"><img src="image/mandala.png" class="imginbox"><p class="btext">MAP<br>地图</p></div></a>
+   <a href="sutras.html"><div class="box" id="b4"><img src="image/mandala.png" class="imginbox"><p class="btext">TIPITAKA<br>三藏</p></div></a>   
+   <a href="arch.html"><div class="box" id="b5"><img src="image/mandala.png" class="imginbox"><p class="btext">ARTIFACT<br>文物</p></div></a>
+  </div>
+  <div class="line"><img class="line" src="image/line.png"></div>
+  <div class="textbox">
+    <p class="text">Buddhism is the world's fourth-largest religion with over 520 million followers, or over 7% of the global population, known as Buddhists. Buddhism encompasses a variety of traditions, beliefs and spiritual practices largely based on original teachings attributed to the Buddha and resulting interpreted philosophies. It originated in ancient India as a Sramana tradition sometime between the 6th and 4th centuries BCE, spreading through much of Asia. Two major extant branches of Buddhism are generally recognized by scholars: Theravada (Pali: "The School of the Elders") and Mahayana (Sanskrit: "The Great Vehicle").
+ 
+    Most Buddhist traditions share the goal of overcoming suffering and the cycle of death and rebirth, either by the attainment of Nirvana or through the path of Buddhahood. Buddhist schools vary in their interpretation of the path to liberation, the relative importance and canonicity assigned to the various Buddhist texts, and their specific teachings and practices. Widely observed practices include taking refuge in the Buddha, the Dharma and the Sangha, observance of moral precepts, monasticism, meditation, and the cultivation of the Paramitas (perfections, or virtues).
+    
+    Theravada Buddhism has a widespread following in Sri Lanka and Southeast Asia such as Cambodia, Laos, Myanmar and Thailand. Mahayana, which includes the traditions of Pure Land, Zen, Nichiren Buddhism, Shingon and Tiantai (Tendai), is found throughout East Asia.
+    
+    Vajrayana, a body of teachings attributed to Indian adepts, may be viewed as a separate branch or as an aspect of Mahayana Buddhism. Tibetan Buddhism, which preserves the Vajrayana teachings of eighth-century India, is practised in the countries of the Himalayan region, Mongolia, and Kalmykia. (text from<a href="https://en.wikipedia.org/wiki/Buddhism"> wikipedia</a>)</p>
+  </div>
+  <div id="bottomdiv">
+  <img alt="dharma wheel" src="image/转法轮.gif" id="bottomimg">
+  <a href="reference.html">Reference</a>|<a href=about.html>About</a><br>made by Kuang Jin, May 2020.
+ </div>
+ </body>
+</html>

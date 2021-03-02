@@ -1,0 +1,45 @@
+*{
+width: 1300px;
+}
+#img1{
+    width: 800px;
+    position: relative;
+    margin-top: -75px;
+    margin-left: 250px;
+}
+#img2{
+    width: 1000px;
+    margin-top: -250px;
+    margin-left: 175px;
+}
+#img3{
+    width: 500px;
+    margin-top: -25px;
+    margin-left: 415px;
+}
+#bottomdiv{
+    padding-top: 250px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 300px;
+    margin:0 auto;
+    font-size: 24px;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+}
+#bottomimg{
+    padding-top: 50px;
+    text-align: center;
+    width: 300px;
+    margin:0 auto;
+    font-size: 24px;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}

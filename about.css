@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(image/佛光山.jpg);
+    background-size: contain;
+    
+}
+
+.bottompagegradient{
+    padding-top: 1100px;
+    position: relative;
+    width:100%;
+    height:50%;
+    background-image: linear-gradient(rgba(0,0,0,0)30%,rgba(0,0,0,0.7)55%, rgba(0,0,0,95)75%);
+    text-align: center;
+}
+.blackbg{
+    height: 1000px;
+    background-color: black;
+}
+#line{
+    width: 200px;
+}
+#pdiv{
+    margin:0 auto;
+    width: 800px;
+    padding-top: 100px;
+}
+p{
+    text-align: justify;
+    font-size: 24px;
+    font-family: Helvetica, Arial, sans-serif;
+    color:white;
+    line-height: 1.5em;
+}
+#bottomdiv{
+    padding-top: 250px;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 300px;
+    margin:0 auto;
+    font-size: 24px;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+}
+#bottomimg{
+    padding-top: 50px;
+    text-align: center;
+    width: 150px;
+    margin:0 auto;
+    font-size: 24px;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
